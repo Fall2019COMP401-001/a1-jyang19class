@@ -9,11 +9,17 @@ public class A1Jedi {
 		Scanner scan = new Scanner(System.in);
 
 		// Your code follows here.
+		//finds number of items
 		int itemnum = scan.nextInt();
+		/*creates parallel arrays for each item, amount, purchases, number of customers
+		 * buying and whether the customer has already bought the item
+		 */
 		boolean[] purchased = new boolean[itemnum];
 		int[] quantity = new int[itemnum];
 		int[] customerbuy = new int[itemnum];
 		String[] items = new String[itemnum];
+		
+		
 		//adds each item to the item list; price is there to get rid of the price value
 		for (int item = 0; item<itemnum; item++) {
 			items[item] = scan.next();
@@ -30,10 +36,16 @@ public class A1Jedi {
 			for (int b = 0; b<itemnum;b++) {
 				purchased[b] = false;
 			}
-			
+			//recieves the name which has no purpose
 			String fname = scan.next();
 			String lname = scan.next();
 			int purchases = scan.nextInt();
+			
+			/*takes in the item name and the quantity purchases, finds the correct
+			 * index and adds the quantity to the total quantity for the item
+			 * checks if the person has purchased the item, if not adds 1 to the
+			 * number of people who purchased the item
+			 */
 			for (int purchase = 0; purchase<purchases; purchase++) {
 				int itemquantity = scan.nextInt();
 				String itemname = scan.next();
