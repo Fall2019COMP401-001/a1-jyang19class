@@ -10,35 +10,35 @@ public class A1Jedi {
 
 		// Your code follows here.
 		//finds number of items
-		int itemnum = scan.nextInt();
+		int number_of_items = scan.nextInt();
 		/*creates parallel arrays for each item, amount, purchases, number of customers
 		 * buying and whether the customer has already bought the item
 		 */
-		boolean[] purchased = new boolean[itemnum];
-		int[] quantity = new int[itemnum];
-		int[] customerbuy = new int[itemnum];
-		String[] items = new String[itemnum];
+		boolean[] purchased = new boolean[number_of_items];
+		int[] quantity = new int[number_of_items];
+		int[] customerBought = new int[number_of_items];
+		String[] items = new String[number_of_items];
 		
 		
 		//adds each item to the item list; price is there to get rid of the price value
-		for (int item = 0; item<itemnum; item++) {
+		for (int item = 0; item<number_of_items; item++) {
 			items[item] = scan.next();
 			double price = scan.nextDouble();
 		}
 		//each item receives a quantity of 0 to begin with
-		for (int num = 0; num<itemnum; num++) {
+		for (int num = 0; num<number_of_items; num++) {
 			quantity[num] = 0;
 		}
 		
 		int people = scan.nextInt();
 		for (int person = 0; person<people; person++) {
 			//each item starts of with a false value to signify person has not bought yet
-			for (int b = 0; b<itemnum;b++) {
+			for (int b = 0; b<number_of_items;b++) {
 				purchased[b] = false;
 			}
-			//recieves the name which has no purpose
-			String fname = scan.next();
-			String lname = scan.next();
+			//Receives the name which has no purpose
+			String first_name = scan.next();
+			String last_name = scan.next();
 			int purchases = scan.nextInt();
 			
 			/*takes in the item name and the quantity purchases, finds the correct
@@ -54,7 +54,7 @@ public class A1Jedi {
 						quantity[i] += itemquantity;
 						if (purchased[i] == false) {
 							purchased[i] = true;
-							customerbuy[i] += 1;
+							customerBought[i] += 1;
 						}
 					}
 				}
@@ -64,13 +64,13 @@ public class A1Jedi {
 			
 		}
 		
-		for (int item = 0; item<itemnum; item++) {
+		for (int item = 0; item<number_of_items; item++) {
 			if (quantity[item] == 0) {
 				System.out.println("No customers bought " + items[item]);
 			}
 			
 			else {
-				System.out.println(customerbuy[item] + " customers bought " + 
+				System.out.println(customerBought[item] + " customers bought " + 
 						quantity[item] + 
 						' ' + items[item]);
 			}

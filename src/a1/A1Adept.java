@@ -9,12 +9,12 @@ public class A1Adept {
 		Scanner scan = new Scanner(System.in);
 
 		// Your code follows here.
-		int itemnum = scan.nextInt();
-		String[] items = new String[itemnum];
-		double [] prices = new double[itemnum];
+		int number_of_items = scan.nextInt();
+		String[] items = new String[number_of_items];
+		double [] prices = new double[number_of_items];
 		
 		//assigns each item and it's price to the same index in the price and item array
-		for (int num = 0; num<itemnum; num++) {
+		for (int num = 0; num<number_of_items; num++) {
 			items[num] = scan.next();
 			prices[num] = scan.nextDouble();
 			
@@ -24,10 +24,10 @@ public class A1Adept {
 		// what to print for lowest and highest prices
 		int people = scan.nextInt();
 		double average = 0;
-		double lowestprice = 0;
-		double highestprice = 0;
-		String highestline = "";
-		String lowestline = "";
+		double lowest_price = 0;
+		double highest_price = 0;
+		String highest_line = "";
+		String lowest_line = "";
 		
 		/*iterates through each person and collects name, total expenses
 		 * and contains another loop which cycles through each item
@@ -59,24 +59,24 @@ public class A1Adept {
 			/*checks if the total expenses is the highest or the first and 
 			 * creates a message line for highest price
 			 */
-			if (expenses > highestprice || highestprice == 0.0) {
-				highestline = "Biggest: " + firstname + ' ' + lastname + 
+			if (expenses > highest_price || highest_price == 0.0) {
+				highest_line = "Biggest: " + firstname + ' ' + lastname + 
 				" (" + String.format("%.2f", expenses) + ')';
-				highestprice = expenses;
+				highest_price = expenses;
 			}
 			
 			/* checks if the total expenses is the lowest or first and
 			 * creates a message line for lowest price
 			 */
-			if (expenses < lowestprice || lowestprice == 0.0) {
-				lowestline = "Smallest: " + firstname + ' ' + lastname + 
+			if (expenses < lowest_price || lowest_price == 0.0) {
+				lowest_line = "Smallest: " + firstname + ' ' + lastname + 
 						" (" + String.format("%.2f", expenses) + ')';
-				lowestprice = expenses;
+				lowest_price = expenses;
 			}
 			average += expenses;
 		}
-		System.out.println(highestline);
-		System.out.println(lowestline);
+		System.out.println(highest_line);
+		System.out.println(lowest_line);
 		System.out.println("Average: " + String.format("%.2f", average/people));
 	}
 	

@@ -18,8 +18,8 @@ public class A1Novice {
 		/*iterates through each customer and saves the first name, last name, 
 		number of items bought to local variables */
 		for (int person = 0; person < customers; person++) {
-			String fname = scan.next();
-			String lname =  scan.next();
+			String first_name = scan.next();
+			String last_name =  scan.next();
 			int items = scan.nextInt();
 			double totalcost = 0;
 			/* iterates through each item and records the prices paid which is added
@@ -32,7 +32,7 @@ public class A1Novice {
 				totalcost += count*price;
 			}
 			//creates the output line for each customer
-			output[person] = (fname.charAt(0)+ ". " + lname + ": " 
+			output[person] = (first_name.charAt(0)+ ". " + last_name + ": " 
 			+ String.format("%.2f", totalcost));
 					
 		}
