@@ -16,7 +16,7 @@ public class A1Novice {
 		String[] output = new String[customers];
 		
 		/*iterates through each customer and saves the first name, last name, 
-		number of items to local variables */
+		number of items bought to local variables */
 		for (int person = 0; person < customers; person++) {
 			String fname = scan.next();
 			String lname =  scan.next();

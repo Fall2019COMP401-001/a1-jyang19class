@@ -57,7 +57,7 @@ public class A1Adept {
 
 			}
 			/*checks if the total expenses is the highest or the first and 
-			 * creates a message line
+			 * creates a message line for highest price
 			 */
 			if (expenses > highestprice || highestprice == 0.0) {
 				highestline = "Biggest: " + firstname + ' ' + lastname + 
@@ -66,7 +66,7 @@ public class A1Adept {
 			}
 			
 			/* checks if the total expenses is the lowest or first and
-			 * creates a message line
+			 * creates a message line for lowest price
 			 */
 			if (expenses < lowestprice || lowestprice == 0.0) {
 				lowestline = "Smallest: " + firstname + ' ' + lastname + 
