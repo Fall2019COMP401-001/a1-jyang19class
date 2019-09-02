@@ -31,7 +31,7 @@ public class A1Adept {
 		
 		/*iterates through each person and collects name, total expenses
 		 * and contains another loop which cycles through each item
-		 * the person purchased; the cost is dded to total expense
+		 * the person purchased; the cost is added to total expense
 		 */
 		for (int person = 0; person<people; person++) {
 			String firstname = scan.next();
@@ -79,16 +79,6 @@ public class A1Adept {
 		System.out.println(lowestline);
 		System.out.println("Average: " + String.format("%.2f", average/people));
 	}
-		/*static double FindPrice(String item, int numofitems, String[] items, double[] prices){
-			double price = 0.0;
-			for (int i = 0; i<numofitems; i++) {
-				if (items[i] == item) {
-
-					price = prices[i];
-					}
-				}
-			return price;
-		}*/
 	
 	
 }

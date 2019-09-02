@@ -41,6 +41,6 @@ public class A1Novice {
 		for (int lines = 0; lines< customers; lines++) {
 			System.out.println(output[lines]);
 		}
-			
+		
 	}
 }
